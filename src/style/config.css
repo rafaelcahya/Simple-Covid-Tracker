@@ -1,0 +1,51 @@
+.text-13{
+    font-size: 13px;
+}
+
+.text-16{
+    font-size: 16px;
+}
+
+.text-20{
+    font-size: 20px;
+}
+
+.text-25{
+    font-size: 25px;
+}
+
+.bg-primary{
+    background-color: #eff1fc
+}
+
+.bg-secondary{
+    background-color: #F2F8FF;
+}
+
+.text-primary{
+    color: #212529;
+}
+
+.text-secondary{
+    color: #1e2f65cc;
+}
+
+.text-tertiary{
+    color: #9D9DBA;
+}
+
+.text-blue{
+    color: #809CFF;
+}
+
+.text-red{
+    color: #FF8383;
+}
+
+.text-green{
+    color: #75FF9C;
+}
+
+.text-orange{
+    color: #FAAC74;
+}
