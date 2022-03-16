@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Continent extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export default class Continent extends Component {
         return (
             <>
                 <div className='bg-white flex flex-col gap-7 p-7 rounded-lg tracking-wide w-1/2'>
-                    <p className='text-primary text-20 poppins_medium'>Coronavirus statistics by continents</p>
+                    <p className='text-primary text-20 poppins_medium'>Coronavirus statistics for all continents</p>
                     <div className='inline-block min-w-full shadow rounded-lg'>
                         <table className='min-w-full'>
                             <thead>
@@ -52,6 +53,7 @@ export default class Continent extends Component {
                             }
                         </table>
                     </div>
+                    <Link to='/continent' className='text-center text-secondary underline'>Show more data</Link>
                 </div>
             </>
         )

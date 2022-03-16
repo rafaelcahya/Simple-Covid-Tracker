@@ -6,10 +6,8 @@ import chevron_left from '../../../asset/icon/chevron-left.svg'
 import chevron_right from '../../../asset/icon/chevron-right.svg'
 import home from '../../../asset/icon/home.svg'
 import globe from '../../../asset/icon/globe.svg'
-import clock from '../../../asset/icon/clock.svg'
 import map from '../../../asset/icon/map.svg'
 import vaccine from '../../../asset/icon/vaccine.png'
-import news from '../../../asset/icon/columns.svg'
 import { Link } from 'react-router-dom';
 
 export default class Sidebar extends Component {
@@ -44,22 +42,14 @@ export default class Sidebar extends Component {
                                     icon={<img src={globe} alt="" width={17} />} className='hover:bg-blue-50'>
                                         <Link to="/global">Global statistics</Link>
                                 </MenuItem>
-                                <MenuItem 
-                                    icon={<img src={clock} alt="" width={17} />} className='hover:bg-blue-50'>
-                                    Daily statistics
-                                </MenuItem>
                                 <SubMenu icon={<img src={map} alt="" width={17} />}  className='hover:bg-blue-50' title="Territory">
-                                    <MenuItem>Country</MenuItem>
-                                    <MenuItem>Continent</MenuItem>
+                                    <MenuItem><Link to="/country">Country</Link></MenuItem>
+                                    <MenuItem><Link to="/continent">Continent</Link></MenuItem>
                                 </SubMenu>
-                                <MenuItem 
-                                    icon={<img src={vaccine} alt="" width={17} />} className='hover:bg-blue-50'>
-                                    Vaccination
-                                </MenuItem>
-                                <MenuItem 
-                                    icon={<img src={news} alt="" width={17} />} className='hover:bg-blue-50'>
-                                    News
-                                </MenuItem>
+                                <SubMenu icon={<img src={vaccine} alt="" width={17} />}  className='hover:bg-blue-50' title="Territory">
+                                    <MenuItem><Link to="/vaccine">Vaccine</Link></MenuItem>
+                                    <MenuItem><Link to="/vaccine-tracker">Vaccine tracker</Link></MenuItem>
+                                </SubMenu>
                             </SidebarContent>
                         </Menu>
                     </ProSidebar>

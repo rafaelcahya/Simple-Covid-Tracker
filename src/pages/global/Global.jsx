@@ -44,75 +44,81 @@ export default class Global extends Component {
             <h1> Pleses wait some time.... </h1> </div> ;
         return (
             <>
-                <div  className='flex h-screen overflow-hidden'>
+                <div className='flex h-screen overflow-hidden'>
                     <Sidebar/>
-                    <div className='flex flex-1 flex-col gap-7 px-10 py-10 w-full overflow-y-scroll'>
+                    <div className='flex flex-1 flex-col gap-5 p-5 w-full overflow-y-scroll'>
                         <Navbar/>
-                        <p className='text-primary text-20 poppins_medium'>Global statistics</p>
-                        <div className='grid grid-cols-2 justify-between gap-7'>
-                            <div className='poppins_medium text-16 flex flex-col gap-3 bg-white text-secondary p-7'>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Total cases</p>
-                                    <p>{results.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                        <div className='grid grid-cols-2 justify-between gap-5'>
+                            <div className='poppins_medium text-16 flex flex-col gap-5 bg-white text-secondary p-7 rounded-lg'>
+                                <div>
+                                    <p className='text-primary text-20'>Total global COVID-19</p>
+                                    <p className='text-secondary text-13 poppins'>Sourced from <a href="https://www.worldometers.info/" className='hover:underline' target='_blank' rel="noreferrer">Worldometers</a> updated every 10 minutes</p>
                                 </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Today cases</p>
-                                    <p>{results.todayCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Total deaths</p>
-                                    <p>{results.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Today deaths</p>
-                                    <p>{results.todayDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Total recovered</p>
-                                    <p>{results.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Today recovered</p>
-                                    <p>{results.todayRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Total active</p>
-                                    <p>{results.active.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Today critical</p>
-                                    <p>{results.critical.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Cases per one million</p>
-                                    <p>{results.casesPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Deaths per one million</p>
-                                    <p>{results.deathsPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Tested per one million</p>
-                                    <p>{results.testsPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Active per one million</p>
-                                    <p>{results.activePerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Recovered per one million</p>
-                                    <p>{results.recoveredPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
-                                </div>
-                                <div className='flex items-center justify-between gap-20'>
-                                    <p className=''>Critical per one million</p>
-                                    <p>{results.criticalPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Total cases</p>
+                                        <p className='text-tertiary'>{results.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Today cases</p>
+                                        <p className='text-tertiary'>{results.todayCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Total deaths</p>
+                                        <p className='text-tertiary'>{results.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Today deaths</p>
+                                        <p className='text-tertiary'>{results.todayDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Total recovered</p>
+                                        <p className='text-tertiary'>{results.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Today recovered</p>
+                                        <p className='text-tertiary'>{results.todayRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Total active</p>
+                                        <p className='text-tertiary'>{results.active.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Today critical</p>
+                                        <p className='text-tertiary'>{results.critical.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Cases per one million</p>
+                                        <p className='text-tertiary'>{results.casesPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Deaths per one million</p>
+                                        <p className='text-tertiary'>{results.deathsPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Tested per one million</p>
+                                        <p className='text-tertiary'>{results.testsPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Active per one million</p>
+                                        <p className='text-tertiary'>{results.activePerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Recovered per one million</p>
+                                        <p className='text-tertiary'>{results.recoveredPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
+                                    <div className='flex items-center justify-between gap-20'>
+                                        <p className=''>Critical per one million</p>
+                                        <p className='text-tertiary'>{results.criticalPerOneMillion.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className='flex justify-center text-center bg-white p-7 rounded-lg'>
-                                <div>
+                            <div className='flex justify-center items-center bg-white p-7 rounded-lg'>
+                                <div className='flex flex-col items-center gap-10'>
                                     <Pie
                                         data={data}
                                     />
+                                    <p className='text-secondary text-13 poppins'>Sourced from <a href="https://www.worldometers.info/" className='hover:underline' target='_blank' rel="noreferrer">Worldometers</a></p>
                                 </div>
                             </div>
                         </div>
